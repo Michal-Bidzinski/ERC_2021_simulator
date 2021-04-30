@@ -470,8 +470,6 @@
     <xacro:boxes prefix="left_panel" x="0.4265" y="0.2672" z="0.27" ox="0" oy="0" oz="0.3556" width="0.02" height="0.3" depth="0.5" color="White" type="fixed"/>
     <xacro:boxes prefix="right_panel" x="0.4265" y="-0.2672" z="0.27" ox="0" oy="0" oz="-0.3556" width="0.02" height="0.3" depth="0.5" color="White" type="fixed"/>
     <xacro:boxes prefix="IMU_module" x="0.21" y="0.2672" z="-0.075" ox="0" oy="0" oz="0.0" width="0.06" height="0.160" depth="0.05" color="Grey" type="fixed"/>
-<!--    <xacro:boxes prefix="Lid" x="0.3" y="-0.2672" z="0.05" ox="0" oy="0" oz="0.0" width="0.05" height="0.165" depth="0.005" color="Grey" type="fixed"/>-->
-<!--    <xacro:boxes prefix="Inspection_box" x="0.3" y="-0.2672" z="0.0" ox="0" oy="0" oz="0.0" width="0.05" height="0.165" depth="0.05" color="Grey" type="fixed"/>-->
     <!-- BOX definition -->
 
     <!-- CYLINDER macro -->
@@ -558,36 +556,20 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-<!--        <geometry>-->
-<!--          <mesh filename="package://ur_description/meshes/gripper/plate1.dae" scale="0.001 0.001 0.001"/>-->
-<!--        </geometry>-->
         <material name="">
           <color rgba="0.1 0.1 0.1 1" />
         </material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 ${pi / 2}" />
-<!--        <geometry>-->
-<!--          <mesh filename="package://ur_description/meshes/gripper/plate1.dae" scale="0.01 0.01 0.01"/>-->
-<!--        </geometry>-->
       </collision>
     </link>
 
     <joint name="plate1_joint" type="fixed">
-<!--      <origin xyz="0.02 0.0 0.0304" rpy="3.141 1.5707 0.0" />-->
       <origin xyz="0.02 0.0 0.0304" rpy="3.141 1.5707 0.0" />
       <parent link="robotiq_arg2f_base_link" />
       <child link="plate1" />
      </joint>
-
-<!--    <xacro:include filename="$(find ur_description)/urdf/robotiq_arg2f_140_model_macro.xacro" />-->
-<!--    <xacro:robotiq_arg2f_140 prefix=""/>-->
-
-<!--    <joint name="${prefix}gripper" type="fixed">-->
-<!--      <origin xyz="0.0 0.0 0.0" rpy="0.0 0 0.0" />-->
-<!--      <parent link="plate1" />-->
-<!--      <child link="robotiq_arg2f_base_link" />-->
-<!--     </joint>-->
 
     <link name="camera_ur_mount">
       <visual>

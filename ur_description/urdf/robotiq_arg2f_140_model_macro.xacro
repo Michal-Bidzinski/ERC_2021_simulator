@@ -48,18 +48,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-<!--        <geometry>-->
-<!--          <mesh filename="package://ur_description/meshes/gripper/robotiq_arg2f_${stroke}_outer_finger.stl" scale="1.0 0.6 0.6"/>-->
-<!--        </geometry>-->
         <material name="">
           <color rgba="0.1 0.1 0.1 1" />
         </material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-<!--        <geometry>-->
-<!--          <mesh filename="package://ur_description/meshes/gripper/robotiq_arg2f_${stroke}_outer_finger.stl" scale="1.0 0.6 0.6"/>-->
-<!--        </geometry>-->
       </collision>
     </link>
   </xacro:macro>
@@ -319,7 +313,7 @@
   <xacro:include filename="$(find ur_description)/urdf/robotiq_arg2f.xacro" />
 
   <xacro:macro name="robotiq_arg2f_140" params="prefix">
-    <xacro:robotiq_arg2f_base_link prefix="${prefix}"/>
+    <xacro:base_link prefix="${prefix}"/>
     <xacro:finger_links prefix="${prefix}" fingerprefix="left" stroke="140"/>
     <xacro:finger_links prefix="${prefix}" fingerprefix="right" stroke="140"/>
     <xacro:finger_joint prefix="${prefix}"/>

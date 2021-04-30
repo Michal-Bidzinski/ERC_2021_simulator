@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-  <!--xacro:include filename="$(find icl_phri_ur5_robotiq_arg140_description)/urdf/robotiq_arg2f_finger_tips.xacro" /-->
-  <xacro:macro name="robotiq_arg2f_base_link" params="prefix">
+  <xacro:macro name="base_link" params="prefix">
     <link name="${prefix}robotiq_arg2f_base_link">
       <inertial>
         <origin xyz="8.625E-08 -4.6583E-06 0.03145" rpy="0 0 0" />
