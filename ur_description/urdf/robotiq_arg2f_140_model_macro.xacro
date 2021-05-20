@@ -31,6 +31,10 @@
         </geometry>
       </collision>
     </link>
+
+    <gazebo reference="${prefix}${fingerprefix}_outer_knuckle">
+        <material>Gazebo/DarkGrey</material>
+    </gazebo>
   </xacro:macro>
 
   <xacro:macro name="outer_finger" params="prefix fingerprefix stroke">
@@ -87,6 +91,10 @@
         </geometry>
       </collision>
     </link>
+
+    <gazebo reference="${prefix}${fingerprefix}_inner_knuckle">
+        <material>Gazebo/DarkGrey</material>
+    </gazebo>
   </xacro:macro>
 
     <xacro:macro name="inner_knuckle2" params="prefix fingerprefix stroke">
@@ -118,6 +126,10 @@
         </geometry>
       </collision>
     </link>
+
+    <gazebo reference="${prefix}${fingerprefix}_inner_knuckle2">
+        <material>Gazebo/DarkGrey</material>
+    </gazebo>
   </xacro:macro>
 
   <xacro:macro name="inner_finger" params="prefix fingerprefix stroke">
@@ -149,6 +161,10 @@
         </geometry>
       </collision>
     </link>
+
+    <gazebo reference="${prefix}${fingerprefix}_inner_finger">
+        <material>Gazebo/DarkGrey</material>
+    </gazebo>
   </xacro:macro>
 
     <xacro:macro name="inner_finger2" params="prefix fingerprefix stroke">
@@ -180,6 +196,10 @@
         </geometry>
       </collision>
     </link>
+
+    <gazebo reference="${prefix}${fingerprefix}_inner_finger2">
+        <material>Gazebo/DarkGrey</material>
+    </gazebo>
   </xacro:macro>
 
   <xacro:macro name="outer_finger_joint" params="prefix fingerprefix reflect">
@@ -286,6 +306,10 @@
         </geometry>
       </collision>
     </link>
+
+    <gazebo reference="${prefix}${fingerprefix}_finger_tip">
+        <material>Gazebo/DarkGrey</material>
+    </gazebo>
   </xacro:macro>
 
   <link name="left_finger_tip_temp"/>

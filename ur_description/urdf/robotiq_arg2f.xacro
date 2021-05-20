@@ -17,6 +17,10 @@
         <origin xyz="0 0 0" rpy="0 0 ${pi / 2}" />
       </collision>
     </link>
+
+    <gazebo reference="${prefix}robotiq_arg2f_base_link">
+        <material>Gazebo/DarkGrey</material>
+    </gazebo>
   </xacro:macro>
 
   <xacro:macro name="finger_joints" params="prefix fingerprefix reflect">

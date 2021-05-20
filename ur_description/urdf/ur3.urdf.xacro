@@ -408,6 +408,10 @@
       </visual>
     </link>
 
+    <gazebo reference="inspection_window">
+        <material>Gazebo/Red</material>
+    </gazebo>
+
     <joint name="inspection_window_joint" type="fixed">
       <parent link="right_panel_box"/>
       <child link="inspection_window"/>
@@ -427,6 +431,10 @@
         </geometry>
       </visual>
     </link>
+
+    <gazebo reference="inspection_window_cover">
+        <material>Gazebo/Red</material>
+    </gazebo>
 
     <joint name="inspection_window_cover_joint" type="fixed">
       <parent link="inspection_window"/>
@@ -449,6 +457,15 @@
           </geometry>
           <material name="${color}"/>
         </visual>
+
+        <inertial>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+          <mass value="1"/>
+          <inertia
+            ixx="0.004" ixy="0" ixz="0"
+            iyy="0.004" iyz="0"
+            izz="0.004"/>
+        </inertial>
       </link>
 
       <joint name="${prefix}_box_joint" type="${type}">
@@ -487,6 +504,15 @@
           </geometry>
           <material name="${color}"/>
         </visual>
+
+        <inertial>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+          <mass value="1"/>
+          <inertia
+            ixx="0.004" ixy="0" ixz="0"
+            iyy="0.004" iyz="0"
+            izz="0.004"/>
+        </inertial>
       </link>
 
       <joint name="${prefix}_cylinder_joint" type="${type}">
@@ -495,7 +521,7 @@
         <child link="${prefix}_cylinder"/>
       </joint>
 
-      <gazebo reference="${prefix}_box">
+      <gazebo reference="${prefix}_cylinder">
         <material>Gazebo/${color}</material>
       </gazebo>
     </xacro:macro>
@@ -520,6 +546,15 @@
           <mesh filename="file://$(find ur_description)/meshes/${name}"/>
         </geometry>
       </visual>
+
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1"/>
+        <inertia
+            ixx="0.004" ixy="0" ixz="0"
+            iyy="0.004" iyz="0"
+            izz="0.004"/>
+        </inertial>
     </link>
 
     <joint name="aruco_${prefix}_joint" type="fixed">
@@ -589,6 +624,10 @@
       </collision>
     </link>
 
+    <gazebo reference="camera_ur_mount">
+        <material>Gazebo/DarkGrey</material>
+    </gazebo>
+
     <joint name="camer_ur_mount_joint" type="fixed">
       <origin xyz="0.0 0.0 -0.0015" rpy="1.5707 0.0 -1.5707" />
       <parent link="${prefix}tool0" />
@@ -630,6 +669,10 @@
         </geometry>
       </collision>
     </link>
+
+    <gazebo reference="dys_middle">
+        <material>Gazebo/Grey</material>
+    </gazebo>
 
     <joint name="dys_middle_joint" type="fixed">
       <origin xyz="0.00375 0.0 0.02015" rpy="0.0 0.0 0.0" />
